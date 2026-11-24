@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gasofa</title>
+<style>
+  :root { --ink:#0B0B0B; --muted:#5c5c5c; --green:#3DDC84; }
+  * { box-sizing: border-box; }
+  body { margin:0; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif; color:var(--ink); background:#fff; }
+  header { background:var(--ink); color:#fff; padding:36px 20px 30px; }
+  .wrap { max-width:760px; margin:0 auto; }
+  .brand { font-weight:800; font-size:40px; letter-spacing:-1.5px; }
+  .brand i { display:inline-block; width:12px; height:12px; border-radius:50%; background:var(--green); margin-left:5px; }
+  header p { color:#cfcfcf; margin:4px 0 16px; font-size:18px; }
+  nav button { background:transparent; color:#cfcfcf; border:1px solid #3a3a3a; border-radius:999px; padding:6px 14px; font-weight:600; cursor:pointer; }
+  nav button[aria-pressed="true"] { background:#fff; color:var(--ink); border-color:#fff; }
+  main { padding:24px 20px 60px; }
+  h2 { font-size:18px; margin:26px 0 4px; }
+  a { color:var(--ink); background:#fff; }
+  section[hidden] { display:none; }
+  .todo { background:#fff6d6; padding:0 4px; border-radius:4px; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand">gasofa<i></i></div>
+  <p id="tag">Vuelve a Gasofa</p>
+  <nav>
+    <button data-lang="ca">Català</button>
+    <button data-lang="es">Castellano</button>
+    <button data-lang="en">English</button>
+  </nav>
+</div></header>
+<main class="wrap">
+
+<section id="es" lang="es" data-tag="Vuelve a Gasofa">
+  <p>Ya puedes cerrar esta página y volver a la app. El estado se actualiza en unos segundos.</p>
+</section>
+
+<section id="ca" lang="ca" hidden data-tag="Torna a Gasofa">
+  <p>Ja pots tancar aquesta pàgina i tornar a l'app. L'estat s'actualitza en uns segons.</p>
+</section>
+
+<section id="en" lang="en" hidden data-tag="Back to Gasofa">
+  <p>You can close this page and go back to the app. The status updates in a few seconds.</p>
+</section>
+
+</main>
+<script>
+  const pick = (l) => {
+    document.querySelectorAll('section').forEach((s) => { s.hidden = s.id !== l; if (!s.hidden) document.getElementById('tag').textContent = s.dataset.tag; });
+    document.querySelectorAll('nav button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === l));
+    document.documentElement.lang = l;
+  };
+  document.querySelectorAll('nav button').forEach((b) => b.addEventListener('click', () => { pick(b.dataset.lang); history.replaceState(null, '', '#' + b.dataset.lang); }));
+  const fromHash = location.hash.slice(1);
+  const nav = (navigator.language || 'es').slice(0, 2);
+  pick(['ca', 'es', 'en'].includes(fromHash) ? fromHash : ['ca', 'es', 'en'].includes(nav) ? nav : 'en');
+</script>
+</body>
+</html>

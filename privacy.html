@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gasofa · Privacidad / Privadesa / Privacy</title>
+<style>
+  :root { --ink:#0B0B0B; --muted:#5c5c5c; --line:#e6e6e6; --green:#3DDC84; }
+  * { box-sizing: border-box; }
+  body { margin:0; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif; color:var(--ink); background:#fff; }
+  header { background:var(--ink); color:#fff; padding:28px 20px; }
+  header .wrap { max-width:760px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+  .brand { font-weight:800; font-size:28px; letter-spacing:-1px; }
+  .brand i { display:inline-block; width:9px; height:9px; border-radius:50%; background:var(--green); margin-left:4px; }
+  nav button { background:transparent; color:#cfcfcf; border:1px solid #3a3a3a; border-radius:999px; padding:6px 14px; font-weight:600; cursor:pointer; }
+  nav button[aria-pressed="true"] { background:#fff; color:var(--ink); border-color:#fff; }
+  main { max-width:760px; margin:0 auto; padding:24px 20px 60px; }
+  h1 { font-size:28px; letter-spacing:-0.5px; margin:8px 0 4px; }
+  h2 { font-size:18px; margin:28px 0 6px; }
+  p, li { color:#222; }
+  .muted { color:var(--muted); font-size:14px; }
+  section[hidden] { display:none; }
+  .todo { background:#fff6d6; padding:0 4px; border-radius:4px; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand">gasofa<i></i></div>
+  <nav>
+    <button data-lang="ca">Català</button>
+    <button data-lang="es">Castellano</button>
+    <button data-lang="en">English</button>
+  </nav>
+</div></header>
+<main>
+
+<!-- ============ CASTELLANO ============ -->
+<section id="es" lang="es">
+  <h1>Política de privacidad</h1>
+  <p class="muted">Última actualización: 24 de noviembre de 2026</p>
+  <p>Gasofa es una app para calcular cuánto cuesta llevar a alguien en coche o en moto y compartir los gastos. La cuenta es opcional. No tiene publicidad ni rastreo y no vende datos a nadie.</p>
+
+  <h2>Quién es el responsable</h2>
+  <p>Hugo Muiños Gambero · Contacto: <a href="mailto:muinoshugo@gmail.com">muinoshugo@gmail.com</a></p>
+
+  <h2>Qué datos se usan y para qué</h2>
+  <ul>
+    <li><b>Ubicación</b> (solo si das permiso y solo mientras usas la app): para poner el punto de salida. Las coordenadas se envían a los servicios de mapas para poner nombre a la dirección (Photon, de komoot, o CartoCiudad, del IGN de España) y calcular la ruta (OSRM). Para el precio de la gasolina solo se envía el código de provincia al servicio público del Ministerio para la Transición Ecológica.</li>
+    <li><b>Direcciones que buscas</b>: se envían a Photon o a CartoCiudad (IGN) para encontrarlas. Las últimas búsquedas se guardan solo en tu móvil.</li>
+    <li><b>Ruta</b>: si pulsas «Ruta», las coordenadas de salida y destino se envían a la app que elijas (Google Maps, Apple Maps o Waze).</li>
+    <li><b>Tus vehículos, precios, idioma y datos de cobro</b> (Bizum, PayPal.me, Revolut): se guardan en tu móvil. Solo salen de él cuando tú compartes un mensaje, enseñas el QR o envías un cobro a un amigo.</li>
+    <li><b>Historial y deudas</b>: los viajes que guardas y los nombres que escribes se guardan solo en tu móvil. Solo salen de él si envías un recordatorio.</li>
+    <li><b>Compras de Gasofa Pro</b>: las cobran Apple o Google. Usamos RevenueCat para saber si tienes Pro, con un identificador anónimo y el historial de compras. Nunca recibimos tu nombre ni los datos de tu tarjeta.</li>
+    <li><b>Mapa</b>: se muestra con Apple Maps (iPhone) o Google Maps (Android), y con OpenStreetMap en la versión web, según sus propias políticas. Al cargarlo, esos servicios reciben tu dirección IP y la zona que ves.</li>
+    <li><b>Pago con tarjeta o Apple Pay (opcional)</b>: lo procesa Stripe, que recibe los datos de pago, el importe y el trayecto y, si activas cobrar, tu email, identidad e IBAN. Nosotros no vemos ni guardamos tu tarjeta ni tu IBAN.</li>
+    <li><b>Cuenta (opcional)</b>: si te registras, guardamos en Supabase tu email, nombre, usuario, amigos, bloqueos y los cobros que envías o recibes (importe, origen, destino, km, estado y los datos de cobro que tengas puestos). El amigo al que cobras ve esos datos. Puedes borrarlo todo en Amigos &gt; Cuenta &gt; Borrar mi cuenta. También <a href="delete-account.html#es">por web</a>. Los códigos de acceso se envían por un proveedor de correo.</li>
+  </ul>
+  <p>No guardamos tus búsquedas ni tu ubicación en nuestro servidor, salvo el nombre del origen y el destino de los cobros que envías.</p>
+
+  <h2>Base legal</h2>
+  <p>Prestarte el servicio que pides (art. 6.1.b del RGPD) y tu consentimiento para usar la ubicación (art. 6.1.a), que puedes retirar cuando quieras en los ajustes del móvil.</p>
+
+  <h2>Cuánto tiempo</h2>
+  <p>Los datos guardados en tu móvil se borran al desinstalar la app. Los proveedores citados los tratan según sus políticas. Algunos pueden tratarlos fuera de la UE con las garantías que exige el RGPD.</p>
+
+  <h2>Tus derechos</h2>
+  <p>Puedes pedir acceso, rectificación, supresión, oposición, limitación o portabilidad escribiendo a <a href="mailto:muinoshugo@gmail.com">muinoshugo@gmail.com</a>. Si no estás de acuerdo con la respuesta, puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p>
+
+  <h2>Menores</h2>
+  <p>La app no está pensada para menores de 14 años.</p>
+</section>
+
+<!-- ============ CATALÀ ============ -->
+<section id="ca" lang="ca" hidden>
+  <h1>Política de privadesa</h1>
+  <p class="muted">Darrera actualització: 24 de novembre de 2026</p>
+  <p>Gasofa és una app per calcular quant costa portar algú en cotxe o en moto i compartir les despeses. El compte és opcional. No té publicitat ni seguiment i no ven dades a ningú.</p>
+
+  <h2>Qui n'és el responsable</h2>
+  <p>Hugo Muiños Gambero · Contacte: <a href="mailto:muinoshugo@gmail.com">muinoshugo@gmail.com</a></p>
+
+  <h2>Quines dades es fan servir i per a què</h2>
+  <ul>
+    <li><b>Ubicació</b> (només si dones permís i només mentre fas servir l'app): per posar el punt de sortida. Les coordenades s'envien als serveis de mapes per posar nom a l'adreça (Photon, de komoot, o CartoCiudad, de l'IGN d'Espanya) i calcular la ruta (OSRM). Per al preu de la benzina només s'envia el codi de província al servei públic del Ministeri per a la Transició Ecològica.</li>
+    <li><b>Adreces que cerques</b>: s'envien a Photon o a CartoCiudad (IGN) per trobar-les. Les darreres cerques es guarden només al teu mòbil.</li>
+    <li><b>Ruta</b>: si prems «Ruta», les coordenades de sortida i destinació s'envien a l'app que triïs (Google Maps, Apple Maps o Waze).</li>
+    <li><b>Els teus vehicles, preus, idioma i dades de cobrament</b> (Bizum, PayPal.me, Revolut): es guarden al teu mòbil. Només en surten quan tu comparteixes un missatge, ensenyes el QR o envies un cobrament a un amic.</li>
+    <li><b>Historial i deutes</b>: els viatges que deses i els noms que escrius es guarden només al teu mòbil. Només en surten si envies un recordatori.</li>
+    <li><b>Compres de Gasofa Pro</b>: les cobren Apple o Google. Fem servir RevenueCat per saber si tens Pro, amb un identificador anònim i l'historial de compres. Mai no rebem el teu nom ni les dades de la teva targeta.</li>
+    <li><b>Mapa</b>: es mostra amb Apple Maps (iPhone) o Google Maps (Android), segons les seves pròpies polítiques. A la versió web es fa servir OpenStreetMap. En carregar-lo, aquests serveis reben la teva adreça IP i la zona que veus.</li>
+    <li><b>Pagament amb targeta o Apple Pay (opcional)</b>: el processa Stripe, que rep les dades de pagament, l'import i el trajecte i, si actives cobrar, el teu correu, identitat i IBAN. Nosaltres no veiem ni guardem la teva targeta ni el teu IBAN.</li>
+    <li><b>Compte (opcional)</b>: si et registres, guardem a Supabase el teu correu, nom, usuari, amics, bloquejos i els cobraments que envies o reps (import, origen, destinació, km, estat i les dades de cobrament que tinguis posades). L'amic a qui cobres veu aquestes dades. Ho pots esborrar tot a Amics &gt; Compte &gt; Esborra el meu compte. També <a href="delete-account.html#ca">per web</a>. Els codis d'accés s'envien amb un proveïdor de correu.</li>
+  </ul>
+  <p>No guardem les teves cerques ni la teva ubicació al nostre servidor, tret del nom de l'origen i la destinació dels cobraments que envies.</p>
+
+  <h2>Base legal</h2>
+  <p>Prestar-te el servei que demanes (art. 6.1.b del RGPD) i el teu consentiment per fer servir la ubicació (art. 6.1.a), que pots retirar quan vulguis a la configuració del mòbil.</p>
+
+  <h2>Quant de temps</h2>
+  <p>Les dades guardades al teu mòbil s'esborren en desinstal·lar l'app. Els proveïdors esmentats les tracten segons les seves polítiques. Alguns poden tractar-les fora de la UE amb les garanties que exigeix el RGPD.</p>
+
+  <h2>Els teus drets</h2>
+  <p>Pots demanar accés, rectificació, supressió, oposició, limitació o portabilitat escrivint a <a href="mailto:muinoshugo@gmail.com">muinoshugo@gmail.com</a>. Si no hi estàs d'acord, pots reclamar a l'Agència Espanyola de Protecció de Dades (aepd.es) o a l'Autoritat Catalana de Protecció de Dades (apdcat.cat).</p>
+
+  <h2>Menors</h2>
+  <p>L'app no està pensada per a menors de 14 anys.</p>
+</section>
+
+<!-- ============ ENGLISH ============ -->
+<section id="en" lang="en" hidden>
+  <h1>Privacy policy</h1>
+  <p class="muted">Last updated: 24 November 2026</p>
+  <p>Gasofa is an app that works out how much it costs to give someone a lift by car or motorbike and helps you share the cost. Accounts are optional. It has no ads and no tracking and it never sells data.</p>
+
+  <h2>Who is responsible</h2>
+  <p>Hugo Muiños Gambero · Contact: <a href="mailto:muinoshugo@gmail.com">muinoshugo@gmail.com</a></p>
+
+  <h2>What data is used and why</h2>
+  <ul>
+    <li><b>Location</b> (only if you allow it, and only while you use the app): to set the starting point. Coordinates are sent to map services to name the address (Photon, by komoot, or CartoCiudad, by Spain's IGN) and to calculate the route (OSRM). For fuel prices, only the province code is sent to the Spanish Ministry for the Ecological Transition public service.</li>
+    <li><b>Addresses you search for</b>: sent to Photon or CartoCiudad (IGN) to find them. Recent searches are stored only on your phone.</li>
+    <li><b>Route</b>: if you tap “Route”, the start and destination coordinates are sent to the app you choose (Google Maps, Apple Maps or Waze).</li>
+    <li><b>Your vehicles, prices, language and payment details</b> (Bizum, PayPal.me, Revolut): stored on your phone. They only leave it when you share a message, show the QR code or send a payment to a friend.</li>
+    <li><b>History and debts</b>: the trips you save and the names you type are stored only on your phone. They only leave it if you send a reminder.</li>
+    <li><b>Gasofa Pro purchases</b>: charged by Apple or Google. We use RevenueCat to know whether you have Pro, with an anonymous identifier and your purchase history. We never receive your name or card details.</li>
+    <li><b>Map</b>: shown with Apple Maps (iPhone) or Google Maps (Android), under their own policies. The web version uses OpenStreetMap. When it loads, those services receive your IP address and the area you view.</li>
+    <li><b>Card or Apple Pay payments (optional)</b>: processed by Stripe, which receives the payment details, amount and trip and, if you turn on getting paid, your email, identity and IBAN. We never see or store your card or IBAN.</li>
+    <li><b>Account (optional)</b>: if you sign up, we store your email, name, username, friends, blocks and the payments you send or receive (amount, start, destination, km, status and the payment details you have set) in Supabase. The friend you charge sees those details. You can erase everything in Friends &gt; Account &gt; Delete my account. Or <a href="delete-account.html#en">on the web</a>. Sign-in codes are sent through an email provider.</li>
+  </ul>
+  <p>We do not store your searches or location on our server, except the start and destination names of payments you send.</p>
+
+  <h2>Legal basis</h2>
+  <p>Providing the service you request (Art. 6(1)(b) GDPR) and your consent to use location (Art. 6(1)(a)), which you can withdraw at any time in your phone settings.</p>
+
+  <h2>How long</h2>
+  <p>Data stored on your phone is deleted when you uninstall the app. The providers above process data under their own policies. Some may process it outside the EU with the safeguards the GDPR requires.</p>
+
+  <h2>Your rights</h2>
+  <p>You can request access, rectification, erasure, objection, restriction or portability by writing to <a href="mailto:muinoshugo@gmail.com">muinoshugo@gmail.com</a>. You can also complain to the Spanish Data Protection Agency (aepd.es).</p>
+
+  <h2>Children</h2>
+  <p>The app is not intended for children under 14.</p>
+</section>
+
+</main>
+<script>
+  const pick = (l) => {
+    document.querySelectorAll('section').forEach((s) => (s.hidden = s.id !== l));
+    document.querySelectorAll('nav button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === l));
+    document.documentElement.lang = l;
+  };
+  document.querySelectorAll('nav button').forEach((b) => b.addEventListener('click', () => { pick(b.dataset.lang); history.replaceState(null, '', '#' + b.dataset.lang); }));
+  const fromHash = location.hash.slice(1);
+  const nav = (navigator.language || 'es').slice(0, 2);
+  pick(['ca', 'es', 'en'].includes(fromHash) ? fromHash : ['ca', 'es', 'en'].includes(nav) ? nav : 'en');
+</script>
+</body>
+</html>

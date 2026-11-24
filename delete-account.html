@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gasofa · Borrar cuenta / Esborrar compte / Delete account</title>
+<style>
+  :root { --ink:#0B0B0B; --muted:#5c5c5c; --green:#3DDC84; }
+  * { box-sizing: border-box; }
+  body { margin:0; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif; color:var(--ink); background:#fff; }
+  header { background:var(--ink); color:#fff; padding:36px 20px 30px; }
+  .wrap { max-width:760px; margin:0 auto; }
+  .brand { font-weight:800; font-size:40px; letter-spacing:-1.5px; }
+  .brand i { display:inline-block; width:12px; height:12px; border-radius:50%; background:var(--green); margin-left:5px; }
+  header p { color:#cfcfcf; margin:4px 0 16px; font-size:18px; }
+  nav button { background:transparent; color:#cfcfcf; border:1px solid #3a3a3a; border-radius:999px; padding:6px 14px; font-weight:600; cursor:pointer; }
+  nav button[aria-pressed="true"] { background:#fff; color:var(--ink); border-color:#fff; }
+  main { padding:24px 20px 60px; }
+  h2 { font-size:18px; margin:26px 0 4px; }
+  a { color:var(--ink); background:#fff; }
+  section[hidden] { display:none; }
+  .todo { background:#fff6d6; padding:0 4px; border-radius:4px; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand">gasofa<i></i></div>
+  <p id="tag">Borrar tu cuenta</p>
+  <nav>
+    <button data-lang="ca">Català</button>
+    <button data-lang="es">Castellano</button>
+    <button data-lang="en">English</button>
+  </nav>
+</div></header>
+<main class="wrap">
+
+<section id="es" lang="es" data-tag="Borrar tu cuenta">
+  <h2>Desde la app</h2>
+  <ol><li>Abre Gasofa y pulsa el botón de las dos personas.</li><li>Entra en <b>Cuenta</b>.</li><li>Pulsa <b>Borrar mi cuenta</b> y confirma. Se borra al momento.</li></ol>
+  <h2>Sin la app</h2>
+  <p>Escríbenos desde el email de tu cuenta, para comprobar que eres tú, a <a href="mailto:muinoshugo@gmail.com?subject=Borrar%20mi%20cuenta%20de%20Gasofa">muinoshugo@gmail.com</a>.</p>
+  <h2>Qué se borra</h2>
+  <ul><li>Tu email, nombre y usuario.</li><li>Tus amigos, solicitudes y bloqueos.</li><li>Los cobros que has enviado y recibido, también para la otra persona.</li></ul>
+  <h2>Qué no se borra</h2>
+  <p>Lo que está solo en tu móvil (vehículos, ajustes e historial) se borra al desinstalar la app. Borrar la cuenta no cancela una suscripción a Pro: cancélala en App Store o Google Play. Los proveedores pueden conservar copias de seguridad y registros técnicos durante un tiempo limitado.</p>
+  <p><a href="privacy.html#es">Política de privacidad</a></p>
+</section>
+
+<section id="ca" lang="ca" hidden data-tag="Esborrar el teu compte">
+  <h2>Des de l'app</h2>
+  <ol><li>Obre Gasofa i prem el botó de les dues persones.</li><li>Entra a <b>Compte</b>.</li><li>Prem <b>Esborra el meu compte</b> i confirma. S'esborra al moment.</li></ol>
+  <h2>Sense l'app</h2>
+  <p>Escriu-nos des del correu del teu compte, per comprovar que ets tu, a <a href="mailto:muinoshugo@gmail.com?subject=Esborrar%20el%20meu%20compte%20de%20Gasofa">muinoshugo@gmail.com</a>.</p>
+  <h2>Què s'esborra</h2>
+  <ul><li>El teu correu, nom i usuari.</li><li>Els teus amics, sol·licituds i bloquejos.</li><li>Els cobraments que has enviat i rebut, també per a l'altra persona.</li></ul>
+  <h2>Què no s'esborra</h2>
+  <p>El que és només al teu mòbil (vehicles, configuració i historial) s'esborra en desinstal·lar l'app. Esborrar el compte no cancel·la una subscripció a Pro: cancel·la-la a App Store o Google Play. Els proveïdors poden conservar còpies de seguretat i registres tècnics durant un temps limitat.</p>
+  <p><a href="privacy.html#ca">Política de privadesa</a></p>
+</section>
+
+<section id="en" lang="en" hidden data-tag="Delete your account">
+  <h2>In the app</h2>
+  <ol><li>Open Gasofa and tap the two-people button.</li><li>Go to <b>Account</b>.</li><li>Tap <b>Delete my account</b> and confirm. It is deleted right away.</li></ol>
+  <h2>Without the app</h2>
+  <p>Email us from your account's address, so we can check it's you, at <a href="mailto:muinoshugo@gmail.com?subject=Delete%20my%20Gasofa%20account">muinoshugo@gmail.com</a>.</p>
+  <h2>What is deleted</h2>
+  <ul><li>Your email, name and username.</li><li>Your friends, requests and blocks.</li><li>Payments you sent and received, for the other person too.</li></ul>
+  <h2>What is not deleted</h2>
+  <p>Data kept only on your phone (vehicles, settings and history) goes when you uninstall the app. Deleting your account does not cancel a Pro subscription: cancel it in the App Store or Google Play. Providers may keep backups and technical logs for a limited time.</p>
+  <p><a href="privacy.html#en">Privacy policy</a></p>
+</section>
+
+</main>
+<script>
+  const pick = (l) => {
+    document.querySelectorAll('section').forEach((s) => { s.hidden = s.id !== l; if (!s.hidden) document.getElementById('tag').textContent = s.dataset.tag; });
+    document.querySelectorAll('nav button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.lang === l));
+    document.documentElement.lang = l;
+  };
+  document.querySelectorAll('nav button').forEach((b) => b.addEventListener('click', () => { pick(b.dataset.lang); history.replaceState(null, '', '#' + b.dataset.lang); }));
+  const fromHash = location.hash.slice(1);
+  const nav = (navigator.language || 'es').slice(0, 2);
+  pick(['ca', 'es', 'en'].includes(fromHash) ? fromHash : ['ca', 'es', 'en'].includes(nav) ? nav : 'en');
+</script>
+</body>
+</html>
